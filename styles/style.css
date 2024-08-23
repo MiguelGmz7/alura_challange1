@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    /*font-family*/
+    --font-inter: "Inter", sans-serif;
+
+    /*dark blue*/
+    --dark-blue-100: #609ED4;
+    --dark-blue-200: #356EA9;
+    --dark-blue-300: #0A3871;
+    --dark-blue-400: #072B61;
+    --dark-blue-500: #052051;
+
+    /*light blue*/
+    --light-blue-100: #F3F5FC;
+    --light-blue-200: #EFF1FA;
+    --light-blue-300: #E9ECF8;
+    --light-blue-400: #AAB2D5;
+    --light-blue-500: #757FB2;
+
+    /*Gray*/
+    --gray-100: #CED4DA;
+    --gray-100: #ADB5BD;
+    --gray-100: #868E96;
+    --gray-100: #495057;
+    --gray-100: #343A40;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin: 2%;
+}
+
+body {
+    background-color: var(--light-blue-100);
+}
+main {
+    margin: 0.6% 8%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__input__text {
+    resize: none;
+
+    /* Nuestro elemento es transparente, no tiene borde, ni linea que se marque cuando se hace click */
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    font-size: 2rem;
+    color: var(--dark-blue-300);
+}
+.main__input__text::placeholder {
+    color: var(--dark-blue-300);
+    font-family: var(--font-inter);
+    font-size: 2rem;
+}
+
+
+.main__input__botones {
+    display: flex;
+    justify-content: center;
+
+    width: 62.5rem;
+    gap: 3rem;
+
+    padding: 2% 0.5%;
+}
+.main__input__botones__encriptar {
+    background-color: var(--dark-blue-300);
+    color: white;
+    font-family: var(--font-inter);
+
+    width: 30rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    border-radius: 24px;
+
+    cursor: pointer;
+}
+
+.main__input__botones__desencriptar {
+    background-color: var(--light-blue-100);
+    color: var(--dark-blue-300);
+    border: 1px solid var(--dark-blue-500);
+    font-family: var(--font-inter);
+    
+    width: 30rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    border-radius: 24px;
+}
+
+.main__output {
+    background-color: white;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5%;
+
+    justify-content: center;
+    padding: 2%;
+
+    /*Ponemos una posicion fija a nuestro output para no tener problema con el layout*/
+    width: 25%;
+    height: 85%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 2%;
+}
+
+.main__output__titulo {
+    font-family: var(--font-inter);
+}
+
+.main__output__texto {
+    font-family: var(--font-inter);
+}
