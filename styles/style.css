@@ -126,3 +126,22 @@ main {
 .main__output__texto {
     font-family: var(--font-inter);
 }
+
+.main__output__copiar {
+    background-color: var(--light-blue-100);
+    color: var(--dark-blue-300);
+    border: 1px solid var(--dark-blue-500);
+    font-family: var(--font-inter);
+    
+    width: 26rem;
+    padding: 2%;
+
+    position: absolute;
+    bottom: 3.5%;
+    margin: 2%;
+
+    border-radius: 24px;
+
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}

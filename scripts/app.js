@@ -23,7 +23,38 @@ btn_encrypt.onclick = function() {
     const texto = document.querySelector(".main__output__texto");
     texto.innerHTML = "";
 
-    let string = input.value;
+    let input_t = document.querySelector(".main__input__text").value;
+    let string = "";
+
+    for (let i = 0; i < input_t.length; i++) {
+        switch (input_t[i]) {
+            case 'e':
+                string += "enter";
+                break;
+            
+            case 'i':
+                string += "imes";
+                break;
+            
+            case 'a':
+                string += "ai";
+                break;
+            
+            case 'o':
+                string += "ober";
+                break;
+            
+            case 'u':
+                string += "ufat";
+                break;
+
+            default:
+                string += input_t[i];
+                break;
+        }
+        
+    }
+
     texto.style["font-size"] = "2rem";
 
     /*Hacemos que el texto que se muestre abarque todo el output y que haga un salto de linea*/
