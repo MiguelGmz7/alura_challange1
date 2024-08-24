@@ -70,6 +70,9 @@ btn_encrypt.onclick = function() {
     const copiar_btn = document.querySelector(".main__output__copiar");
     copiar_btn.innerHTML = "Copiar";
     copiar_btn.style.display = "block";
+
+    btn_decrypt.disabled = false;
+    btn_decrypt.style["cursor"] = "pointer";
 }
 
 const copiar_btn = document.querySelector(".main__output__copiar");
@@ -77,4 +80,31 @@ copiar_btn.onclick = function() {
     let copy_text = document.querySelector(".main__output__texto");
     navigator.clipboard.writeText(copy_text.innerHTML);
     alert("Texto copiado al portapapeles");
+}
+
+// Function to replace "enter" with "e"
+function replaceMultipleWords(text) {
+    return text.replace(/enter|imes|ai|ober|ufat/g, function(match) {
+        switch (match) {
+            case 'enter':
+                return 'e';
+            case 'imes':
+                return 'i';
+            case 'ai':
+                return 'a';
+            case 'ober':
+                return 'o';
+            case 'ufat':
+                return 'u';
+            default:
+                return match;
+        }
+    });
+}
+
+btn_decrypt.onclick = function() {
+    let text_decrypt = document.querySelector(".main__input__text").value;
+    let modifiedString = replaceMultipleWords(text_decrypt);
+    const output = document.querySelector(".main__output__texto");
+    output.innerHTML = modifiedString;
 }
