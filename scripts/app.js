@@ -73,8 +73,8 @@ btn_encrypt.onclick = function() {
 }
 
 const copiar_btn = document.querySelector(".main__output__copiar");
-// copiar_btn.onclick = function() {
-//     texto.select();
-//     Document.execCommand("copy");
-//     alert("Texto copiado al portapapeles");
-// }
+copiar_btn.onclick = function() {
+    let copy_text = document.querySelector(".main__output__texto");
+    navigator.clipboard.writeText(copy_text.innerHTML);
+    alert("Texto copiado al portapapeles");
+}
