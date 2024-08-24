@@ -45,6 +45,15 @@ main {
     justify-content: space-between;
 }
 
+/* .main__input {
+    display: flex;
+    width: 80%;
+    height: 40%;
+    
+    flex-direction: column;
+    gap: 30%;
+} */
+
 .main__input__text {
     resize: none;
 
@@ -55,6 +64,7 @@ main {
 
     font-size: 2rem;
     color: var(--dark-blue-300);
+
 }
 .main__input__text::placeholder {
     color: var(--dark-blue-300);
@@ -64,26 +74,34 @@ main {
 
 
 .main__input__botones {
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
 
-    width: 62.5rem;
-    gap: 3rem;
+    width: 40%;
+    /* gap: 1%; */
 
     padding: 2% 0.5%;
+
+    position: fixed;
+    bottom: 8.3%;
+
+    margin-top: 22%;
 }
 .main__input__botones__encriptar {
     background-color: var(--dark-blue-300);
     color: white;
     font-family: var(--font-inter);
 
-    width: 30rem;
+    width: 25%;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 
     border-radius: 24px;
 
     cursor: pointer;
+
+    position: fixed;
+    left: 11%;
 }
 
 .main__input__botones__desencriptar {
@@ -92,11 +110,14 @@ main {
     border: 1px solid var(--dark-blue-500);
     font-family: var(--font-inter);
     
-    width: 30rem;
+    width: 25%;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 
     border-radius: 24px;
+
+    position: fixed;
+    left: 40%;
 }
 
 .main__output {
@@ -112,11 +133,15 @@ main {
 
     /*Ponemos una posicion fija a nuestro output para no tener problema con el layout*/
     width: 25%;
-    height: 85%;
+    height: 83%;
     position: fixed;
     top: 0;
     right: 0;
     margin: 2%;
+}
+
+.main__output__image {
+    width: 80%;
 }
 
 .main__output__titulo {
@@ -128,20 +153,26 @@ main {
 }
 
 .main__output__copiar {
+    display: none;
     background-color: var(--light-blue-100);
     color: var(--dark-blue-300);
     border: 1px solid var(--dark-blue-500);
     font-family: var(--font-inter);
     
-    width: 26rem;
+    width: 25.6%;
     padding: 2%;
 
-    position: absolute;
+    
+    position: fixed;
     bottom: 3.5%;
+    left: 68.79%;
     margin: 2%;
+   
 
     border-radius: 24px;
 
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+
+    cursor: pointer;
 }

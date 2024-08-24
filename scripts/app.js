@@ -67,9 +67,14 @@ btn_encrypt.onclick = function() {
     /*--------------------------------------------------------------------------------------*/
     texto.innerHTML = string;
 
-    const copiar = document.createElement("button");
-    copiar.innerHTML = "Copiar";
-    copiar.className = "main__output__copiar";
-
-    selector.appendChild(copiar);
+    const copiar_btn = document.querySelector(".main__output__copiar");
+    copiar_btn.innerHTML = "Copiar";
+    copiar_btn.style.display = "block";
 }
+
+const copiar_btn = document.querySelector(".main__output__copiar");
+// copiar_btn.onclick = function() {
+//     texto.select();
+//     Document.execCommand("copy");
+//     alert("Texto copiado al portapapeles");
+// }
