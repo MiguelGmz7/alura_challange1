@@ -118,6 +118,8 @@ main {
 
     position: fixed;
     left: 40%;
+
+    cursor: pointer;
 }
 
 .main__output {
