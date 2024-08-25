@@ -179,7 +179,7 @@ main {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px){
     * {
         max-width: 100%;
     }
@@ -197,19 +197,22 @@ main {
         display: flex;
         /* justify-content: center;  */
         width: 100%;
-        flex-direction: column;
+        flex-direction: row;
+        gap: 2%;
         
     }
 
     .main__input__botones__encriptar {
         position: static;
-        width: 100%;
+        width: 50%;
         margin-bottom: 6%;
+        height: 5%;
+
     }
 
     .main__input__botones__desencriptar {
         position: static;
-        width: 100%;
+        width: 50%;
         margin-bottom: 8%;
     }
 
@@ -244,5 +247,17 @@ main {
         position: static;
         width: 90%;
         margin-left: 4.7%;
+    }
+}
+
+@media (max-width: 400px){
+    .main__input__botones {
+        flex-direction: column;
+    }
+    .main__input__botones__encriptar {
+        width: 100%;
+    }
+    .main__input__botones__desencriptar {
+        width: 100%;
     }
 }
