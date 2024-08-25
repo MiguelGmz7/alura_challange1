@@ -71,8 +71,9 @@ const output_display = {
         variable.copiar_btn.innerHTML = "Copiar";
         variable.copiar_btn.style.display = "block";
 
-        if(window.innerWidth <= 400){
+        if(window.innerWidth <= 768){
             variable.texto_output.style.width = "80%";
+            variable.texto_output.style.margin = "5%";
         }
     },
     
@@ -85,7 +86,7 @@ const output_display = {
         variable["texto_output"].style["font-size"] = "1rem";
         variable.copiar_btn.style.display = "none";
         
-        if(window.innerWidth <= 400){
+        if(window.innerWidth <= 768){
             variable.image_output.style.display = "none";
         }
     }
@@ -103,7 +104,7 @@ variable.btn_encrypt.onclick = function() {
         output_display.on();
     } else {
         output_display.off();
-        let string = code["encrypt"](variable.input.value);
+        let string = code["encrypt"](variable.input.value.toLowerCase());
         variable.texto_output.innerHTML = string;
     }
 }
@@ -119,7 +120,7 @@ variable.btn_decrypt.onclick = function() {
         output_display.on();
     } else {
         output_display.off();
-        let string = code["decrypt"](variable.input.value);
+        let string = code["decrypt"](variable.input.value.toLowerCase());
         variable.texto_output.innerHTML = string;
     }
 } 
