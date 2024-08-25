@@ -70,6 +70,11 @@ const output_display = {
         /*--------------------------------------------------------------------------------------*/
         variable.copiar_btn.innerHTML = "Copiar";
         variable.copiar_btn.style.display = "block";
+
+        if(window.innerWidth <= 768){
+            variable.texto_output.style.width = "80%";
+            variable.texto_output.style.margin = "5%";
+        }
     },
     
     on: function() {
@@ -80,6 +85,10 @@ const output_display = {
         variable["texto_output"].innerHTML = "Ingresa el texto que desees encriptar o desencriptar.";
         variable["texto_output"].style["font-size"] = "1rem";
         variable.copiar_btn.style.display = "none";
+        
+        if(window.innerWidth <= 768){
+            variable.image_output.style.display = "none";
+        }
     }
 }
 
@@ -93,10 +102,9 @@ variable.btn_encrypt.onclick = function() {
 
     if (variable.input.value == ""){
         output_display.on();
-        variable.copiar_btn.style.display = "none";
     } else {
         output_display.off();
-        let string = code["encrypt"](variable.input.value);
+        let string = code["encrypt"](variable.input.value.toLowerCase());
         variable.texto_output.innerHTML = string;
     }
 }
@@ -110,10 +118,9 @@ variable.copiar_btn.onclick = function() {
 variable.btn_decrypt.onclick = function() {
     if (variable.input.value == ""){
         output_display.on();
-        copiar_btn.style.display = "none";
     } else {
         output_display.off();
-        let string = code["decrypt"](variable.input.value);
+        let string = code["decrypt"](variable.input.value.toLowerCase());
         variable.texto_output.innerHTML = string;
     }
 } 
